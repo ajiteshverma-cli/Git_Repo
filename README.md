@@ -3,6 +3,7 @@ This repo filled with various cli to get some stats or data
 detail information is inside each folder
 
 **Installation & Setup**
+
 Python 3.6 or 3.8 should be installed at your development machine
 
 open cmd
