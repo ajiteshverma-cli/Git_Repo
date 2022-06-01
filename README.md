@@ -4,8 +4,8 @@ detail information is inside each folder
 
 **Installation & Setup**
 
-
-- open cmd
+- go one folder back and copy requirements.txt and pip.ini there
+- Now there open cmd
 - cd into repository root
 - Create a virtual environment `python -m venv venv`
 - Activate virtual environment `venv\Scripts\activate`
