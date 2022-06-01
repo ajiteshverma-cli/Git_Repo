@@ -11,7 +11,4 @@ detail information is inside each folder
 - Activate virtual environment `venv\Scripts\activate`
 - Copy pip.ini into the virtual environment `copy pip.ini venv`
 - Install dependencies `pip install -r requirements.txt`
-- Install development dependencies `pip install -r requirements_development.txt`
-- Activate pre-commit `pre-commit install`
-- Install git flow `git flow init` 
 - point your IDE to the environment
