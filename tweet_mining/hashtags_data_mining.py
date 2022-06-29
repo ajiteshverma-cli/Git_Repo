@@ -55,7 +55,7 @@ def stats_creator(env):
         tweet_dataframe = pd.DataFrame(data=users_locs,
                                   columns=['user', "location"])
 
-        create_dataframe_table(tweet_dataframe)
+        #create_dataframe_table(tweet_dataframe)
 
         print(tweet_dataframe)
 
