@@ -5,15 +5,6 @@ import pandas as pd
 import plotly.figure_factory as ff
 
 
-consumer_key = "iY3da0W9XGRKBNi8uzxV9WNqJ"
-consumer_secret = "mPqe47qGOJHvjs4HJMAW7JFgX291t2ByPZc611bzgzSlszwg4Y"
-
-access_token = "1510345927273369604-9SxrlFB45Fl0TG6BosKCRIYRuZzi7S"
-access_token_secret = "UVQqwD4f3NLMyVPLLxBmGcLg5CUOs2pEebLqd8LCQ8B3u"
-
-
-bearer_token = "AAAAAAAAAAAAAAAAAAAAADZtbAEAAAAATTKit4X2GL0rfOE5I75xgd7D0Ho%3DRxoD2uBIdRJjWNlBTXwLQ8P4waLuuqnCI4izvtpsT7I2gdPlqj"
-
 
 @click.command()
 @click.option('--env', '-e',default="tweet_stats", type=click.Choice(["tweet_stats"],case_sensitive=False),
