@@ -16,6 +16,8 @@ user = login.get_user()
 #get all repositories
 my_repos = user.get_repos()
 
+# to check if the personal git is working or not
+
 for repository in my_repos:
     name =  repository.name
     private,public = repository.private, not(repository.private)
