@@ -1,5 +1,6 @@
-#
 import requests
+from requests.exceptions import HTTPError
+import json
 
 def parse_a_url(url):
     """
@@ -7,18 +8,33 @@ def parse_a_url(url):
     :return:
     """
     response = requests.get(url)
-    response.raise_for_status()
-    # access JSOn content
-    jsonResponse = response.json()
-    print("Entire JSON response")
-    print(jsonResponse)
+    ok_to_use = check_status_code(response)
+    if ok_to_use:
+        # access JSOn content
+        jsonResponse = response.json()
+        print("Entire JSON response")
+        print(json.dumps(jsonResponse, sort_keys=True, indent=4))
 
+
+def check_status_code(resposnse):
+    """
+    check the url response and see if the api has send a usable resposne or not
+    """
+
+    status_code = resposnse.status_code
+    print(f'status code is: {status_code}')
+    if status_code == 200:
+        return True
+    else:
+        return  False
 
 if __name__ == '__main__':
     # main function starts
-    url = "http://omdbapi.com/"
+    url = "https://api.github.com/"
     try:
         parse_a_url(url)
+    except HTTPError as httperr:
+        print(f'http error occured: {httperr}')
     except Exception as ex:
-        print(ex)
+        print(f'other error occured: {ex}')
     # main function ends
