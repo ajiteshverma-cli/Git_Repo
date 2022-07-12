@@ -7,7 +7,15 @@ def parse_a_url(url):
     :param url: url which needs to be parsed and then check for response
     :return:
     """
+    # data = {"username": "bond",
+    #         "address": "somewhere",
+    #         "id": "007"
+    # }
+
+    # response = requests.post(url, json=data)
+
     response = requests.get(url)
+
     ok_to_use = check_status_code(response)
     if ok_to_use:
         # access JSOn content
@@ -30,7 +38,7 @@ def check_status_code(resposnse):
 
 if __name__ == '__main__':
     # main function starts
-    url = "https://api.github.com/"
+    url = "https://owen-wilson-wow-api.herokuapp.com/wows/movies"
     try:
         parse_a_url(url)
     except HTTPError as httperr:
