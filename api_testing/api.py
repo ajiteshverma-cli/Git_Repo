@@ -47,6 +47,7 @@ def check_status_code(resposnse):
 if __name__ == '__main__':
     # main function starts
     url = "https://api.stackexchange.com/2.3/questions?fromdate=1656633600&order=desc&sort=activity&site=stackoverflow"
+    # this is for a random fox
     #url = "https://randomfox.ca/floof"
     try:
         parse_a_url(url)
