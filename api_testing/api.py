@@ -28,7 +28,7 @@ def parse_a_url(url):
             lang = item["tags"]
             ques = item["title"]
             if "go" or "python" in lang:
-                print(f'languages used: {lang} and the question is {ques}:')
+                print(f'languages used: {lang} and the question is: {ques}:')
 
 
 
